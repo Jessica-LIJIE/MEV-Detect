@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-06-06T16:59:47.467470+00:00",
+  "record_id": "snap_003",
+  "particles": 20000,
+  "max_iter": 100,
+  "seed": 42,
+  "repeats": 3,
+  "results": [
+    {
+      "world_size": 1,
+      "elapsed_ms_mean": 68.2074270832042,
+      "elapsed_ms_stdev": 1.6534857066835145,
+      "elapsed_ms_runs": [
+        68.08654591441154,
+        70.29025815427303,
+        66.24547718092799
+      ],
+      "best_fitness_mean": 618.6299438476562,
+      "num_particles_total": 20000,
+      "num_particles_per_rank": 20000,
+      "record_id": "snap_003",
+      "max_iter": 100,
+      "seed": 42,
+      "speedup": 1.0,
+      "parallel_efficiency_pct": 100.0
+    },
+    {
+      "world_size": 2,
+      "elapsed_ms_mean": 286.2785517548521,
+      "elapsed_ms_stdev": 3.507827428754661,
+      "elapsed_ms_runs": [
+        286.89570911228657,
+        290.23279109969735,
+        281.7071550525725
+      ],
+      "best_fitness_mean": 618.6299438476562,
+      "num_particles_total": 20000,
+      "num_particles_per_rank": 10000,
+      "record_id": "snap_003",
+      "max_iter": 100,
+      "seed": 42,
+      "speedup": 0.23825545667008968,
+      "parallel_efficiency_pct": 11.912772833504484
+    },
+    {
+      "world_size": 4,
+      "elapsed_ms_mean": 373.95636426905793,
+      "elapsed_ms_stdev": 45.63083169486265,
+      "elapsed_ms_runs": [
+        333.04392686113715,
+        351.19350673630834,
+        437.63165920972824
+      ],
+      "best_fitness_mean": 618.6299438476562,
+      "num_particles_total": 20000,
+      "num_particles_per_rank": 5000,
+      "record_id": "snap_003",
+      "max_iter": 100,
+      "seed": 42,
+      "speedup": 0.1823940801663416,
+      "parallel_efficiency_pct": 4.5598520041585395
+    }
+  ]
+}

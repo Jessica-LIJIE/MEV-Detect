@@ -1,0 +1,15 @@
+{
+  "snapshot_id": "mock_mp_001",
+  "record_id": "mock_mp_001",
+  "num_candidates": 32,
+  "num_particles_total": 2000,
+  "num_particles_per_rank": 2000,
+  "world_size": 1,
+  "max_iter": 40,
+  "seed": 42,
+  "device": "cpu",
+  "elapsed_ms": 36.34120000060648,
+  "converged_at_iter": 40,
+  "best_fitness": 4147.0029296875,
+  "cuda_device_count": 1
+}

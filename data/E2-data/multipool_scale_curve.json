@@ -1,0 +1,119 @@
+{
+  "timestamp": "2026-06-19T11:23:12.332420+00:00",
+  "experiment": "E2_multipool_scale_curve",
+  "record_id": "mock_mp_001",
+  "particle_grid": [
+    10000,
+    50000,
+    100000,
+    200000
+  ],
+  "k_grid": [
+    16,
+    32,
+    64
+  ],
+  "devices": [
+    "cpu"
+  ],
+  "crossover_note": "GPU not faster than CPU in scanned grid",
+  "single_gpu_100k_k32_ms": 19.725250000192318,
+  "results": [
+    {
+      "device": "cpu",
+      "particles": 10000,
+      "k": 16,
+      "num_routes": 16,
+      "elapsed_ms_mean": 1.3272999931359664,
+      "elapsed_ms_stdev": 0.16290000348817557
+    },
+    {
+      "device": "cpu",
+      "particles": 50000,
+      "k": 16,
+      "num_routes": 16,
+      "elapsed_ms_mean": 4.032999997434672,
+      "elapsed_ms_stdev": 0.03449999348958954
+    },
+    {
+      "device": "cpu",
+      "particles": 100000,
+      "k": 16,
+      "num_routes": 16,
+      "elapsed_ms_mean": 9.407450001162942,
+      "elapsed_ms_stdev": 0.2952499999082647
+    },
+    {
+      "device": "cpu",
+      "particles": 200000,
+      "k": 16,
+      "num_routes": 16,
+      "elapsed_ms_mean": 21.217349996732082,
+      "elapsed_ms_stdev": 0.2924499931395985
+    },
+    {
+      "device": "cpu",
+      "particles": 10000,
+      "k": 32,
+      "num_routes": 32,
+      "elapsed_ms_mean": 0.9196500031976029,
+      "elapsed_ms_stdev": 0.021849991753697395
+    },
+    {
+      "device": "cpu",
+      "particles": 50000,
+      "k": 32,
+      "num_routes": 32,
+      "elapsed_ms_mean": 8.346250004251488,
+      "elapsed_ms_stdev": 0.7014500006334856
+    },
+    {
+      "device": "cpu",
+      "particles": 100000,
+      "k": 32,
+      "num_routes": 32,
+      "elapsed_ms_mean": 19.725250000192318,
+      "elapsed_ms_stdev": 0.3432500016060658
+    },
+    {
+      "device": "cpu",
+      "particles": 200000,
+      "k": 32,
+      "num_routes": 32,
+      "elapsed_ms_mean": 43.05940000631381,
+      "elapsed_ms_stdev": 0.3149999974993989
+    },
+    {
+      "device": "cpu",
+      "particles": 10000,
+      "k": 64,
+      "num_routes": 33,
+      "elapsed_ms_mean": 1.4242999968701042,
+      "elapsed_ms_stdev": 0.056400000175926834
+    },
+    {
+      "device": "cpu",
+      "particles": 50000,
+      "k": 64,
+      "num_routes": 33,
+      "elapsed_ms_mean": 8.425249994616024,
+      "elapsed_ms_stdev": 0.003049994120374322
+    },
+    {
+      "device": "cpu",
+      "particles": 100000,
+      "k": 64,
+      "num_routes": 33,
+      "elapsed_ms_mean": 22.289399996225256,
+      "elapsed_ms_stdev": 1.0201999903074466
+    },
+    {
+      "device": "cpu",
+      "particles": 200000,
+      "k": 64,
+      "num_routes": 33,
+      "elapsed_ms_mean": 44.533150001370814,
+      "elapsed_ms_stdev": 0.2738499970291741
+    }
+  ]
+}

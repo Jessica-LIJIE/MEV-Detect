@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "snap_003",
+  "num_particles_total": 1000,
+  "num_particles_per_rank": 250,
+  "world_size": 4,
+  "max_iter": 100,
+  "seed": 42,
+  "device": "cuda:0",
+  "elapsed_ms": 409.72379222512245,
+  "converged_at_iter": 21,
+  "best_fitness": 618.6299438476562,
+  "best_position": [
+    50.0,
+    0.598738431930542,
+    0.3198243975639343,
+    2.0336387157440186
+  ],
+  "expected_profit_usd": 618.6299438476562,
+  "cuda_device_count": 4
+}

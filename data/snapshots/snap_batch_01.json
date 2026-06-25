@@ -1,0 +1,244 @@
+{
+  "snapshot_id": "snap_l125350000_l2475080000",
+  "l1_block": 25350000,
+  "l2_block": 475080000,
+  "l1_batch": 25350741,
+  "timestamp": "2026-06-19T07:02:47Z",
+  "trigger": "manual_fetch",
+  "l2_lag_ms": 8921000,
+  "swap_amount_usd": null,
+  "scenario": null,
+  "gas": {
+    "l1_gwei": 2.103737895,
+    "l2_gwei": 0.12000000000000001
+  },
+  "bridge_fee_usd": 5.0,
+  "inventory": {
+    "l1_eth": 50.0,
+    "l2_eth": 50.0
+  },
+  "l1_pools": [
+    {
+      "pool_id": "eth_usdc_005",
+      "chain": "ethereum",
+      "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+      "token0": "USDC",
+      "token1": "WETH",
+      "fee_tier": 500,
+      "sqrt_price_x96": "1922357172134741461473595121204710",
+      "liquidity": "2920987989046221674",
+      "tick": 201944,
+      "eth_usdc_price": 1698.5995426775337,
+      "ticks_loaded": false,
+      "block_number": 25350000,
+      "block_time": "2026-06-19T07:02:47Z",
+      "initialized_ticks": [
+        {
+          "tick": 201934,
+          "initialized": false,
+          "liquidityGross": "0",
+          "liquidityNet": "0"
+        },
+        {
+          "tick": 201944,
+          "initialized": false,
+          "liquidityGross": "0",
+          "liquidityNet": "0"
+        },
+        {
+          "tick": 201954,
+          "initialized": false,
+          "liquidityGross": "0",
+          "liquidityNet": "0"
+        }
+      ]
+    },
+    {
+      "pool_id": "eth_usdc_030",
+      "chain": "ethereum",
+      "pool_address": "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8",
+      "token0": "USDC",
+      "token1": "WETH",
+      "fee_tier": 3000,
+      "sqrt_price_x96": "1923064982093259451884481237187164",
+      "liquidity": "1371039396254130928",
+      "tick": 201952,
+      "eth_usdc_price": 1697.3493879252815,
+      "ticks_loaded": false,
+      "block_number": 25350000,
+      "block_time": "2026-06-19T07:02:47Z"
+    },
+    {
+      "pool_id": "eth_usdt_005",
+      "chain": "ethereum",
+      "pool_address": "0x11b815efB8f581194ae79006d24E0d814B7697F6",
+      "token0": "WETH",
+      "token1": "USDT",
+      "fee_tier": 500,
+      "sqrt_price_x96": "3266481764280861995333231",
+      "liquidity": "1558594377624503255",
+      "tick": -201938,
+      "eth_usdc_price": 1699.8136347270988,
+      "ticks_loaded": false,
+      "block_number": 25350000,
+      "block_time": "2026-06-19T07:02:47Z"
+    },
+    {
+      "pool_id": "eth_usdt_030",
+      "chain": "ethereum",
+      "pool_address": "0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36",
+      "token0": "WETH",
+      "token1": "USDT",
+      "fee_tier": 3000,
+      "sqrt_price_x96": "3265241538585442024441161",
+      "liquidity": "9675749453504869736",
+      "tick": -201946,
+      "eth_usdc_price": 1698.5231010672853,
+      "ticks_loaded": false,
+      "block_number": 25350000,
+      "block_time": "2026-06-19T07:02:47Z"
+    },
+    {
+      "pool_id": "eth_dai_005",
+      "chain": "ethereum",
+      "pool_address": "0x60594a405d53811d3BC4766596EFD80fd545A270",
+      "token0": "DAI",
+      "token1": "WETH",
+      "fee_tier": 500,
+      "sqrt_price_x96": "1922124151270498509722123926",
+      "liquidity": "21023976590718492168946",
+      "tick": -74382,
+      "eth_usdc_price": 1699.011413185822,
+      "ticks_loaded": false,
+      "block_number": 25350000,
+      "block_time": "2026-06-19T07:02:47Z"
+    },
+    {
+      "pool_id": "eth_usdc_100",
+      "chain": "ethereum",
+      "pool_address": "0x7BeA39867e4169DBe237d55C8242a8f2fcDcc387",
+      "token0": "USDC",
+      "token1": "WETH",
+      "fee_tier": 10000,
+      "sqrt_price_x96": "1922224825810406255855974987746712",
+      "liquidity": "13516665470645558",
+      "tick": 201943,
+      "eth_usdc_price": 1698.8334499103364,
+      "ticks_loaded": false,
+      "block_number": 25350000,
+      "block_time": "2026-06-19T07:02:47Z"
+    }
+  ],
+  "l2_pools": [
+    {
+      "pool_id": "arb_usdc_005",
+      "chain": "arbitrum",
+      "pool_address": "0xC6962004f452bE9203591991D15f6b388e09E8D0",
+      "token0": "WETH",
+      "token1": "USDC",
+      "fee_tier": 500,
+      "sqrt_price_x96": "3257786040604119602823168",
+      "liquidity": "2428498226946906708",
+      "tick": -201991,
+      "eth_usdc_price": 1690.7755097426784,
+      "ticks_loaded": false,
+      "block_number": 475080000,
+      "block_time": "2026-06-19T09:31:28Z",
+      "initialized_ticks": [
+        {
+          "tick": -202001,
+          "initialized": false,
+          "liquidityGross": "0",
+          "liquidityNet": "0"
+        },
+        {
+          "tick": -201991,
+          "initialized": false,
+          "liquidityGross": "0",
+          "liquidityNet": "0"
+        },
+        {
+          "tick": -201981,
+          "initialized": false,
+          "liquidityGross": "0",
+          "liquidityNet": "0"
+        }
+      ]
+    },
+    {
+      "pool_id": "arb_usdc_030",
+      "chain": "arbitrum",
+      "pool_address": "0xc473e2aEE3441BF9240Be85eb122aBB059A3B57c",
+      "token0": "WETH",
+      "token1": "USDC",
+      "fee_tier": 3000,
+      "sqrt_price_x96": "3260528344472414618386432",
+      "liquidity": "405594540501173131",
+      "tick": -201975,
+      "eth_usdc_price": 1693.6231931970008,
+      "ticks_loaded": false,
+      "block_number": 475080000,
+      "block_time": "2026-06-19T09:31:28Z"
+    },
+    {
+      "pool_id": "arb_usdt_005",
+      "chain": "arbitrum",
+      "pool_address": "0x641C00A822e8b671738d32a431a4Fb6074E5c79d",
+      "token0": "WETH",
+      "token1": "USDT",
+      "fee_tier": 500,
+      "sqrt_price_x96": "3258941323893676640829440",
+      "liquidity": "323728490776897354",
+      "tick": -201984,
+      "eth_usdc_price": 1691.974895469432,
+      "ticks_loaded": false,
+      "block_number": 475080000,
+      "block_time": "2026-06-19T09:31:28Z"
+    },
+    {
+      "pool_id": "arb_usdt_030",
+      "chain": "arbitrum",
+      "pool_address": "0xc82819F72A9e77E2c0c3A69B3196478f44303cf4",
+      "token0": "WETH",
+      "token1": "USDT",
+      "fee_tier": 3000,
+      "sqrt_price_x96": "3262196707566301705522896",
+      "liquidity": "17418063811243006",
+      "tick": -201964,
+      "eth_usdc_price": 1695.3568394253302,
+      "ticks_loaded": false,
+      "block_number": 475080000,
+      "block_time": "2026-06-19T09:31:28Z"
+    },
+    {
+      "pool_id": "arb_dai_005",
+      "chain": "arbitrum",
+      "pool_address": "0x31Fa55e03bAD93C7f8AFfdd2eC616EbFde246001",
+      "token0": "WETH",
+      "token1": "DAI",
+      "fee_tier": 500,
+      "sqrt_price_x96": "3257153305421276977624765069003",
+      "liquidity": "60511716686344600072",
+      "tick": 74329,
+      "eth_usdc_price": 1690.1188004025894,
+      "ticks_loaded": false,
+      "block_number": 475080000,
+      "block_time": "2026-06-19T09:31:28Z"
+    },
+    {
+      "pool_id": "arb_arb_005",
+      "chain": "arbitrum",
+      "pool_address": "0xC6F780497A95e246EB9449f5e4770916DCd6396A",
+      "token0": "WETH",
+      "token1": "ARB",
+      "fee_tier": 500,
+      "sqrt_price_x96": "11315310503452582912928290121766",
+      "liquidity": "1176337271882584162458951",
+      "tick": 99236,
+      "eth_usdc_price": 20397.351705764107,
+      "ticks_loaded": false,
+      "block_number": 475080000,
+      "block_time": "2026-06-19T09:31:28Z"
+    }
+  ]
+}

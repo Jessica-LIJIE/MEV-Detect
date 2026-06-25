@@ -1,0 +1,340 @@
+{
+  "description": "离线测试用 L1/L2 池子状态快照（10 条，覆盖价差、Gas、桥费、延迟等场景）",
+  "version": "1.0",
+  "pool_addresses": {
+    "ethereum_eth_usdc_005": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+    "arbitrum_eth_usdc_005": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36"
+  },
+  "records": [
+    {
+      "id": "snap_001",
+      "scenario": "经典套利：L1 价高于 L2，价差约 0.13%，Gas 正常",
+      "timestamp": "2025-06-01T08:15:30Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20100100,
+        "block_time": "2025-06-01T08:15:30Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79350000000000000000000000000",
+        "liquidity": "1850000000000000000000",
+        "tick": 201350,
+        "eth_usdc_price": 3510.50,
+        "swap_amount_usd": 150000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220001500,
+        "block_time": "2025-06-01T08:15:31Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "79080000000000000000000000000",
+        "liquidity": "920000000000000000000",
+        "tick": 201080,
+        "eth_usdc_price": 3505.80
+      },
+      "l2_lag_ms": 980,
+      "gas": {
+        "l1_gwei": 22.0,
+        "l2_gwei": 0.1
+      },
+      "bridge_fee_usd": 5.0
+    },
+    {
+      "id": "snap_002",
+      "scenario": "价差过小：扣除成本后几乎无利可图",
+      "timestamp": "2025-06-01T09:42:10Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20100250,
+        "block_time": "2025-06-01T09:42:10Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79200000000000000000000000000",
+        "liquidity": "1600000000000000000000",
+        "tick": 201200,
+        "eth_usdc_price": 3488.20,
+        "swap_amount_usd": 80000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220003200,
+        "block_time": "2025-06-01T09:42:11Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "79180000000000000000000000000",
+        "liquidity": "880000000000000000000",
+        "tick": 201180,
+        "eth_usdc_price": 3487.50
+      },
+      "l2_lag_ms": 1100,
+      "gas": {
+        "l1_gwei": 28.0,
+        "l2_gwei": 0.12
+      },
+      "bridge_fee_usd": 5.0
+    },
+    {
+      "id": "snap_003",
+      "scenario": "高 Gas：L1 Gas 飙升，利润被成本吞噬",
+      "timestamp": "2025-06-01T11:05:45Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20100400,
+        "block_time": "2025-06-01T11:05:45Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79420000000000000000000000000",
+        "liquidity": "1400000000000000000000",
+        "tick": 201420,
+        "eth_usdc_price": 3525.00,
+        "swap_amount_usd": 200000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220005000,
+        "block_time": "2025-06-01T11:05:46Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "79100000000000000000000000000",
+        "liquidity": "750000000000000000000",
+        "tick": 201050,
+        "eth_usdc_price": 3510.00
+      },
+      "l2_lag_ms": 850,
+      "gas": {
+        "l1_gwei": 85.0,
+        "l2_gwei": 0.15
+      },
+      "bridge_fee_usd": 5.0
+    },
+    {
+      "id": "snap_004",
+      "scenario": "大利差：L1 明显高于 L2，价差约 1.1%",
+      "timestamp": "2025-06-01T13:20:00Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20100680,
+        "block_time": "2025-06-01T13:20:00Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79600000000000000000000000000",
+        "liquidity": "2100000000000000000000",
+        "tick": 201580,
+        "eth_usdc_price": 3542.80,
+        "swap_amount_usd": 350000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220008800,
+        "block_time": "2025-06-01T13:20:01Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "78850000000000000000000000000",
+        "liquidity": "1100000000000000000000",
+        "tick": 200920,
+        "eth_usdc_price": 3504.20
+      },
+      "l2_lag_ms": 720,
+      "gas": {
+        "l1_gwei": 18.0,
+        "l2_gwei": 0.08
+      },
+      "bridge_fee_usd": 5.0
+    },
+    {
+      "id": "snap_005",
+      "scenario": "高桥费：跨链桥费用 25 USD，压缩净利润",
+      "timestamp": "2025-06-01T14:55:22Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20100820,
+        "block_time": "2025-06-01T14:55:22Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79380000000000000000000000000",
+        "liquidity": "1750000000000000000000",
+        "tick": 201380,
+        "eth_usdc_price": 3518.60,
+        "swap_amount_usd": 120000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220010500,
+        "block_time": "2025-06-01T14:55:23Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "79050000000000000000000000000",
+        "liquidity": "900000000000000000000",
+        "tick": 201060,
+        "eth_usdc_price": 3508.40
+      },
+      "l2_lag_ms": 1050,
+      "gas": {
+        "l1_gwei": 24.0,
+        "l2_gwei": 0.1
+      },
+      "bridge_fee_usd": 25.0
+    },
+    {
+      "id": "snap_006",
+      "scenario": "低桥费：桥费仅 2 USD，小价差也可能盈利",
+      "timestamp": "2025-06-01T16:30:18Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20101000,
+        "block_time": "2025-06-01T16:30:18Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79280000000000000000000000000",
+        "liquidity": "1950000000000000000000",
+        "tick": 201280,
+        "eth_usdc_price": 3496.30,
+        "swap_amount_usd": 95000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220012800,
+        "block_time": "2025-06-01T16:30:19Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "79150000000000000000000000000",
+        "liquidity": "1050000000000000000000",
+        "tick": 201150,
+        "eth_usdc_price": 3492.10
+      },
+      "l2_lag_ms": 900,
+      "gas": {
+        "l1_gwei": 15.0,
+        "l2_gwei": 0.08
+      },
+      "bridge_fee_usd": 2.0
+    },
+    {
+      "id": "snap_007",
+      "scenario": "L2 延迟大：跨层时间窗 5 秒，套利窗口收窄",
+      "timestamp": "2025-06-01T18:10:05Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20101250,
+        "block_time": "2025-06-01T18:10:05Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79500000000000000000000000000",
+        "liquidity": "1500000000000000000000",
+        "tick": 201480,
+        "eth_usdc_price": 3530.00,
+        "swap_amount_usd": 180000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220015200,
+        "block_time": "2025-06-01T18:10:10Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "78980000000000000000000000000",
+        "liquidity": "680000000000000000000",
+        "tick": 201000,
+        "eth_usdc_price": 3512.50
+      },
+      "l2_lag_ms": 5000,
+      "gas": {
+        "l1_gwei": 20.0,
+        "l2_gwei": 0.1
+      },
+      "bridge_fee_usd": 5.0
+    },
+    {
+      "id": "snap_008",
+      "scenario": "L2 延迟小：250ms 内 L2 已更新，时效窗口充足",
+      "timestamp": "2025-06-01T19:45:33Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20101480,
+        "block_time": "2025-06-01T19:45:33Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79450000000000000000000000000",
+        "liquidity": "2200000000000000000000",
+        "tick": 201520,
+        "eth_usdc_price": 3535.20,
+        "swap_amount_usd": 280000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220018000,
+        "block_time": "2025-06-01T19:45:33Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "79000000000000000000000000000",
+        "liquidity": "1200000000000000000000",
+        "tick": 201040,
+        "eth_usdc_price": 3518.00
+      },
+      "l2_lag_ms": 250,
+      "gas": {
+        "l1_gwei": 19.0,
+        "l2_gwei": 0.09
+      },
+      "bridge_fee_usd": 5.0
+    },
+    {
+      "id": "snap_009",
+      "scenario": "巨额 Swap：50 万美元触发，高流动性池",
+      "timestamp": "2025-06-01T21:00:00Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20101700,
+        "block_time": "2025-06-01T21:00:00Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "79750000000000000000000000000",
+        "liquidity": "3500000000000000000000",
+        "tick": 201650,
+        "eth_usdc_price": 3558.90,
+        "swap_amount_usd": 500000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220021000,
+        "block_time": "2025-06-01T21:00:01Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "78900000000000000000000000000",
+        "liquidity": "1800000000000000000000",
+        "tick": 200880,
+        "eth_usdc_price": 3520.30
+      },
+      "l2_lag_ms": 650,
+      "gas": {
+        "l1_gwei": 32.0,
+        "l2_gwei": 0.11
+      },
+      "bridge_fee_usd": 8.0
+    },
+    {
+      "id": "snap_010",
+      "scenario": "反向价差：L2 高于 L1（本实验主要测 L1→L2 方向，预期无套利）",
+      "timestamp": "2025-06-02T02:15:40Z",
+      "trigger": "l1_large_swap",
+      "l1": {
+        "chain": "ethereum",
+        "block_number": 20102200,
+        "block_time": "2025-06-02T02:15:40Z",
+        "pool_address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "sqrt_price_x96": "78950000000000000000000000000",
+        "liquidity": "1300000000000000000000",
+        "tick": 200950,
+        "eth_usdc_price": 3475.60,
+        "swap_amount_usd": 110000.0
+      },
+      "l2": {
+        "chain": "arbitrum",
+        "block_number": 220028500,
+        "block_time": "2025-06-02T02:15:41Z",
+        "pool_address": "0xC31E54c7a869B9Fc0ccE9654dD8772aB00ec6F36",
+        "sqrt_price_x96": "79250000000000000000000000000",
+        "liquidity": "850000000000000000000",
+        "tick": 201250,
+        "eth_usdc_price": 3488.90
+      },
+      "l2_lag_ms": 920,
+      "gas": {
+        "l1_gwei": 16.0,
+        "l2_gwei": 0.08
+      },
+      "bridge_fee_usd": 5.0
+    }
+  ]
+}

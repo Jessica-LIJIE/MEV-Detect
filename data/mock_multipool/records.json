@@ -1,0 +1,97 @@
+{
+  "version": "1.0",
+  "description": "Mock 多池消融数据（Phase 4）。仅用于 E1/E3 消融，不作市场套利统计。",
+  "records": [
+    {
+      "id": "mock_mp_001",
+      "category": "profitable_pair",
+      "scenario": "仅 USDC 0.05% 组合 (0,0) 有利差 ~200 USD/ETH",
+      "best_pair": [0, 0],
+      "l1_prices": [3600, 3500, 3500, 3500, 3500, 3500],
+      "l2_prices": [3400, 3500, 3500, 3500, 3500, 3500],
+      "liquidity": "3000000000000000000",
+      "gas": { "l1_gwei": 15, "l2_gwei": 0.08 },
+      "inventory": { "l1_eth": 50, "l2_eth": 50 },
+      "bridge_fee_usd": 5.0,
+      "l2_lag_ms": 500
+    },
+    {
+      "id": "mock_mp_002",
+      "category": "profitable_pair",
+      "scenario": "仅 USDT 0.05% 组合 (2,2) 有利差 ~180 USD/ETH",
+      "best_pair": [2, 2],
+      "l1_prices": [3500, 3500, 3590, 3500, 3500, 3500],
+      "l2_prices": [3500, 3500, 3410, 3500, 3500, 3500],
+      "liquidity": "3000000000000000000",
+      "gas": { "l1_gwei": 18, "l2_gwei": 0.1 },
+      "inventory": { "l1_eth": 40, "l2_eth": 40 },
+      "bridge_fee_usd": 5.0,
+      "l2_lag_ms": 600
+    },
+    {
+      "id": "mock_mp_003",
+      "category": "profitable_pair",
+      "scenario": "仅 DAI 0.05% 组合 (4,4) 有利差 ~160 USD/ETH",
+      "best_pair": [4, 4],
+      "l1_prices": [3500, 3500, 3500, 3500, 3560, 3500],
+      "l2_prices": [3500, 3500, 3500, 3500, 3400, 3500],
+      "liquidity": "3000000000000000000",
+      "gas": { "l1_gwei": 12, "l2_gwei": 0.06 },
+      "inventory": { "l1_eth": 45, "l2_eth": 45 },
+      "bridge_fee_usd": 5.0,
+      "l2_lag_ms": 400
+    },
+    {
+      "id": "mock_mp_004",
+      "category": "no_opportunity",
+      "scenario": "全池同价，无跨层价差",
+      "l1_prices": [3500, 3500, 3500, 3500, 3500, 3500],
+      "l2_prices": [3500, 3500, 3500, 3500, 3500, 3500],
+      "liquidity": "3000000000000000000",
+      "gas": { "l1_gwei": 20, "l2_gwei": 0.1 },
+      "inventory": { "l1_eth": 50, "l2_eth": 50 },
+      "bridge_fee_usd": 5.0,
+      "l2_lag_ms": 800
+    },
+    {
+      "id": "mock_mp_005",
+      "category": "no_opportunity",
+      "scenario": "价差过小，扣除 gas/桥费后无利可图",
+      "l1_prices": [3500.5, 3500, 3500, 3500, 3500, 3500],
+      "l2_prices": [3500.0, 3500, 3500, 3500, 3500, 3500],
+      "liquidity": "3000000000000000000",
+      "gas": { "l1_gwei": 25, "l2_gwei": 0.12 },
+      "inventory": { "l1_eth": 50, "l2_eth": 50 },
+      "bridge_fee_usd": 5.0,
+      "l2_lag_ms": 900
+    },
+    {
+      "id": "mock_mp_006",
+      "category": "latency_eats_profit",
+      "scenario": "有价差但 canonical 桥时延惩罚过高，全局最优仍为负",
+      "best_pair": [0, 0],
+      "l1_prices": [3520, 3500, 3500, 3500, 3500, 3500],
+      "l2_prices": [3490, 3500, 3500, 3500, 3500, 3500],
+      "liquidity": "3000000000000000000",
+      "gas": { "l1_gwei": 15, "l2_gwei": 0.08 },
+      "inventory": { "l1_eth": 20, "l2_eth": 20 },
+      "bridge_fee_usd": 5.0,
+      "l2_lag_ms": 500,
+      "latency_risk_lambda": 0.08
+    },
+    {
+      "id": "mock_mp_007",
+      "category": "latency_eats_profit",
+      "scenario": "中等价差 + 高 λ，Across 快桥可盈利、慢桥不盈利（消融对比）",
+      "best_pair": [1, 1],
+      "l1_prices": [3500, 3550, 3500, 3500, 3500, 3500],
+      "l2_prices": [3500, 3480, 3500, 3500, 3500, 3500],
+      "liquidity": "3000000000000000000",
+      "gas": { "l1_gwei": 14, "l2_gwei": 0.07 },
+      "inventory": { "l1_eth": 30, "l2_eth": 30 },
+      "bridge_fee_usd": 5.0,
+      "l2_lag_ms": 500,
+      "latency_risk_lambda": 0.03
+    }
+  ]
+}

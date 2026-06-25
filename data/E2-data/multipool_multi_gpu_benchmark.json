@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-06-25T16:42:12.500145+00:00",
+  "experiment": "E2_multipool_multi_gpu",
+  "record_id": "mock_mp_001",
+  "top_k": 32,
+  "particles": 2000,
+  "max_iter": 40,
+  "seed": 42,
+  "repeats": 2,
+  "results": [
+    {
+      "world_size": 1,
+      "elapsed_ms_mean": 37.335349996283185,
+      "elapsed_ms_stdev": 0.9941499956767075,
+      "elapsed_ms_runs": [
+        38.32949999195989,
+        36.34120000060648
+      ],
+      "best_fitness_mean": 4147.0029296875,
+      "num_particles_total": 2000,
+      "num_particles_per_rank": 2000,
+      "num_candidates": 32,
+      "max_iter": 40,
+      "record_id": "mock_mp_001",
+      "speedup": 1.0,
+      "parallel_efficiency_pct": 100.0
+    }
+  ],
+  "notes": [
+    "Full PSO search wall-clock (not single fitness batch).",
+    "Teacher E2 gate: skip multi-GPU if single-card batch fitness 100k×K=32 < 2s."
+  ]
+}
